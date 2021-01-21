@@ -13,15 +13,10 @@
 ###################################
 
 gff='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/annotation_file/TrR.v5.renamed_reformated.gtf.gz'
-# gff='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_test/Oryza_sativa.IRGSP-1.0.49.chr.gff3.gz'
 fasta='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/GCA_005869975.1_AgR_To_v5_genomic.fna'
-# fasta='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_test/Oryza_sativa.IRGSP-1.0.dna.toplevel.fa'
-# CDSbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_test/Os_CDS.bed'
 CDSbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_4fold/Os_CDS.bed'
 fastaCDSout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_4fold/Os_CDS.tab'
-# fastaCDSout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_test/Os_CDS.tab'
 fourfoldbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_4fold/Trepens'
-# fourfoldbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_test/sites.4fold'
 
 ###################################
 # STEP 1: GET BED FILE OF CDS AND
@@ -35,7 +30,7 @@ fourfoldbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_Ag
 
 ###################################
 
-# bash gff2bed.sh <(zcat ${gff}) CDS | awk -f gffphaseshift.awk - > ${CDSbedout} 
+bash gff2bed.sh <(zcat ${gff}) CDS | awk -f gffphaseshift.awk - > ${CDSbedout} && 
 
 ###################################
 # STEP 2: USE BED FILE AND FASTA
@@ -46,7 +41,7 @@ fourfoldbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_Ag
 # format.
 ###################################
 
-# bedtools getfasta -s -tab -name -fi ${fasta} -bed ${CDSbedout} > ${fastaCDSout} 
+bedtools getfasta -s -tab -name -fi ${fasta} -bed ${CDSbedout} > ${fastaCDSout} && 
 
 ###################################
 # STEP 3: KEEP ONLY LONGEST 
