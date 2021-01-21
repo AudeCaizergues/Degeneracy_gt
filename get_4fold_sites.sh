@@ -12,11 +12,11 @@
 # adjusted. Assume gff is gzipped.
 ###################################
 
-gff='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/annotation_file/TrR.v5.renamed_reformated.gtf.gz'
-fasta='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/GCA_005869975.1_AgR_To_v5_genomic.fna'
-CDSbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_4fold/Os_CDS.bed'
-fastaCDSout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_4fold/Os_CDS.tab'
-fourfoldbedout='/scratch/research/references/trifolium/repens/GCA_005869975.1_AgR_To_v5/0fold_4fold/Trepens'
+gff=$1
+fasta=$2
+CDSbedout="$3/Os_CDS.bed"
+fastaCDSout="$3/Os_CDS.tab"
+fourfoldbedout="$3/Trepens"
 
 ###################################
 # STEP 1: GET BED FILE OF CDS AND
