@@ -14,9 +14,12 @@
 
 gff=$1
 fasta=$2
-CDSbedout="$3/Os_CDS.bed"
-fastaCDSout="$3/Os_CDS.tab"
-fourfoldbedout="$3/Trepens"
+outpath=$3
+CDSbedout="${outpath}/Os_CDS.bed"
+fastaCDSout="${outpath}/Os_CDS.tab"
+fourfoldbedout="${outpath}/Trepens"
+
+mkdir -p ${outpath}
 
 ###################################
 # STEP 1: GET BED FILE OF CDS AND
