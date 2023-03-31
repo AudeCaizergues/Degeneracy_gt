@@ -1,3 +1,1 @@
-This repo is a direct clone of [tvkent/Degeneracy](https://github.com/tvkent/Degeneracy) with a few minor modifications
-to enable the white clover (_Trifolium repens_) genome and annotation file to be used as inputs. I've also modified
-`get_4fold_sites.sh` to accept command-line arguments in the following order: gff, fasta, outpath.
+This repo is a direct clone of [James-S-Santangelo/Degeneracy](https://github.com/James-S-Santangelo/Degeneracy) (cloned from [tvkent/Degeneracy](https://github.com/tvkent/Degeneracy)) with a few minor modifications to enable the Great tit (_Parus major_) genome and annotation file to be used as inputs. This pipeline also include the modifications made by James S. Santangelo for `get_4fold_sites.sh` to accept command-line arguments in the following order: gff, fasta, outpath.
