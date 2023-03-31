@@ -17,7 +17,7 @@ fasta=$2
 outpath=$3
 CDSbedout="${outpath}/Os_CDS.bed"
 fastaCDSout="${outpath}/Os_CDS.tab"
-fourfoldbedout="${outpath}/Trepens"
+fourfoldbedout="${outpath}/Pmajor"
 
 mkdir -p ${outpath}
 
